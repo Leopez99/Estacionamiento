@@ -12,39 +12,20 @@ namespace ConsoleApp2.Vehiculos
         const int AUTO = 2;
         const int MOTO = 3;
 
-        public Vehiculo crearVehiculo(int v)
+        public Vehiculo crearVehiculo(int v, string matricula, int tiempo, bool esCliente)
         {
-            Console.Write("Matricula: ");
-            string matricula = Console.ReadLine();
-            Console.Write("Tiempo: ");
-            string tiempo = Console.ReadLine();
-            Console.Write("Es cliente: ");
-            string esCliente = Console.ReadLine();
 
             switch (v)
             {
                 case CAMION:
-                    return new Camioneta(matricula, int.Parse(tiempo), bool.Parse(esCliente));
+                    return new Camioneta(matricula, tiempo, esCliente);
                 case AUTO:
-                    return new Auto(matricula, int.Parse(tiempo), bool.Parse(esCliente)); ;
+                    return new Auto(matricula, tiempo, esCliente); ;
                 case MOTO:
-                    return new Moto(matricula, int.Parse(tiempo), bool.Parse(esCliente));
+                    return new Moto(matricula, tiempo, esCliente);
                 default:
                     return null;
             }
-        }
-
-        private Camioneta crearCamioneta()
-        {
-            Console.Write("Matricula: ");
-            string matricula = Console.ReadLine();
-            Console.Write("Tiempo: ");
-            string tiempo = Console.ReadLine();
-            Console.Write("Es cliente: ");
-            string esCliente = Console.ReadLine();
-
-            return new Camioneta(matricula, int.Parse(tiempo), bool.Parse(esCliente));
-
         }
     }
 }
