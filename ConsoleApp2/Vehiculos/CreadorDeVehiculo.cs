@@ -8,20 +8,15 @@ namespace ConsoleApp2.Vehiculos
 {
     public class CreadorDeVehiculo
     {
-        const int CAMION = 1;
-        const int AUTO = 2;
-        const int MOTO = 3;
-
-        public Vehiculo crearVehiculo(int v, string matricula, int tiempo, bool esCliente)
+        public Vehiculo crearVehiculo(TipoDeVehiculo t , string matricula, int tiempo, bool esCliente)
         {
-
-            switch (v)
+            switch (t)
             {
-                case CAMION:
+                case TipoDeVehiculo.Camioneta:
                     return new Camioneta(matricula, tiempo, esCliente);
-                case AUTO:
+                case TipoDeVehiculo.Auto:
                     return new Auto(matricula, tiempo, esCliente); ;
-                case MOTO:
+                case TipoDeVehiculo.Moto:
                     return new Moto(matricula, tiempo, esCliente);
                 default:
                     return null;
