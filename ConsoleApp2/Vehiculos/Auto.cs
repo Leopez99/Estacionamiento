@@ -8,7 +8,7 @@ namespace ConsoleApp2.Vehiculos
 {
     public class Auto : Vehiculo
     {
-        public Auto(string matricula, int tiempo, bool esCliente) : base(matricula, tiempo, esCliente)
+        public Auto(string matricula, int horaDeEntrada, bool esCliente) : base(matricula, horaDeEntrada, esCliente)
         {
         }
     }

@@ -9,13 +9,13 @@ namespace ConsoleApp2.Vehiculos
     public abstract class Vehiculo
     {
         public string matricula { get; set; }
-        public int tiempo { get; set; }
+        public int horaDeEntrada { get; set; }
         public bool esCliente { get; set; }
 
-        protected Vehiculo(string matricula, int tiempo, bool esCliente) 
+        protected Vehiculo(string matricula, int horaDeEntrada, bool esCliente) 
         {
             this.matricula = matricula;
-            this.tiempo = tiempo;
+            this.horaDeEntrada = horaDeEntrada;
             this.esCliente = esCliente;
         }
 

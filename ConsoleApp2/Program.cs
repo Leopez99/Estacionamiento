@@ -7,5 +7,5 @@ CreadorDeVehiculo creadorDeVehiculo = new CreadorDeVehiculo();
 Vehiculo a = creadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta, "ABCC2312", 2, true);
 
 Console.WriteLine($"Matricula: {a.matricula}");
-Console.WriteLine($"Tiempo: {a.tiempo}");
+Console.WriteLine($"horaDeEntrada: {a.horaDeEntrada}");
 Console.WriteLine($"esCliente: {a.esCliente}");

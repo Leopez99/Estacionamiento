@@ -13,10 +13,10 @@ namespace TestEstacionamiento
             creadorDeVehiculo = new CreadorDeVehiculo();
         }
 
-        [Fact]  //No funciona porque el metodo crearVehiculo hace cosas con readLine() y necesita la consola
+        [Fact]
         public void CreacionDeCamioneta()
         {
-            camioneta = creadorDeVehiculo.crearVehiculo(1, "C123", 2, true); 
+            camioneta = creadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta, "C123", 2, true); 
             Assert.Equal("C123", camioneta.matricula);
         }
     }
