@@ -7,16 +7,14 @@ namespace TestEstacionamiento
     {
         Vehiculo camioneta;
         Vehiculo auto;
-        CreadorDeVehiculo creadorDeVehiculo;
         public UnitTest1()
         {
-            creadorDeVehiculo = new CreadorDeVehiculo();
         }
 
         [Fact]
         public void CreacionDeCamioneta()
         {
-            camioneta = creadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta, "C123", 2, true); 
+            camioneta = CreadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta, "C123", 2, true); 
             Assert.Equal("C123", camioneta.matricula);
         }
     }
