@@ -24,6 +24,7 @@ namespace ConsoleApp2.Vehiculos
         }
 
         public static void ObtenerVehiculo(out string matricula, out int horaDeEntrada, out bool esCliente)
+            //Estos son datos que deberia obtenerlo cada vez que entra un auto nuevo.
         {
             Console.Write("Matricula: ");
             matricula = Console.ReadLine();
