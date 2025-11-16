@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2.Vehiculos
 {
-    public class CreadorDeVehiculo
+    public static class CreadorDeVehiculo
     {
-        public Vehiculo crearVehiculo(TipoDeVehiculo t , string matricula, int horaDeEntrada, bool esCliente)
+        public static Vehiculo crearVehiculo(TipoDeVehiculo t , string matricula, int horaDeEntrada, bool esCliente)
         {
             switch (t)
             {
@@ -21,6 +21,16 @@ namespace ConsoleApp2.Vehiculos
                 default:
                     return null;
             }
+        }
+
+        public static void ObtenerVehiculo(out string matricula, out int horaDeEntrada, out bool esCliente)
+        {
+            Console.Write("Matricula: ");
+            matricula = Console.ReadLine();
+            Console.Write("Tiempo: ");
+            horaDeEntrada = int.Parse(Console.ReadLine());
+            Console.Write("Es cliente: ");
+            esCliente = bool.Parse(Console.ReadLine());
         }
     }
 }

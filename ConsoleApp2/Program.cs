@@ -3,9 +3,14 @@ using ConsoleApp2.Vehiculos;
 
 Console.WriteLine("Hello, World!");
 
-CreadorDeVehiculo creadorDeVehiculo = new CreadorDeVehiculo();
-Vehiculo a = creadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta, "ABCC2312", 2, true);
+string matricula;
+int horaDeEntrada;
+bool esCliente;
 
-Console.WriteLine($"Matricula: {a.matricula}");
-Console.WriteLine($"horaDeEntrada: {a.horaDeEntrada}");
-Console.WriteLine($"esCliente: {a.esCliente}");
+CreadorDeVehiculo.ObtenerVehiculo(out matricula, out horaDeEntrada, out esCliente);
+
+Vehiculo vehiculo = CreadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta,matricula, horaDeEntrada, esCliente);
+
+Console.WriteLine($"Matricula: {vehiculo.matricula}");
+Console.WriteLine($"horaDeEntrada: {vehiculo.horaDeEntrada}");
+Console.WriteLine($"esCliente: {vehiculo.esCliente}");
