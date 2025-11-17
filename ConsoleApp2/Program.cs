@@ -1,16 +1,26 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using ConsoleApp2;
 using ConsoleApp2.Vehiculos;
+using System.Text.Json;
 
-Console.WriteLine("Hello, World!");
+//string matricula;
+//int horaDeEntrada;
+//bool esCliente;
 
-string matricula;
-int horaDeEntrada;
-bool esCliente;
+//CreadorDeVehiculo.ObtenerVehiculo(out matricula, out horaDeEntrada, out esCliente);
 
-CreadorDeVehiculo.ObtenerVehiculo(out matricula, out horaDeEntrada, out esCliente);
+Vehiculo vehiculo = CreadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta,"matricula", 2, true);
 
-Vehiculo vehiculo = CreadorDeVehiculo.crearVehiculo(TipoDeVehiculo.Camioneta,matricula, horaDeEntrada, esCliente);
+//string jsonString = JsonSerializer.Serialize(vehiculo);
 
-Console.WriteLine($"Matricula: {vehiculo.matricula}");
-Console.WriteLine($"horaDeEntrada: {vehiculo.horaDeEntrada}");
-Console.WriteLine($"esCliente: {vehiculo.esCliente}");
+//Console.WriteLine(jsonString);
+
+Ticketera ticket = new Ticketera();
+
+ticket.CrearTicket(vehiculo);
+
+
+
+//Console.WriteLine($"Matricula: {vehiculo.matricula}");
+//Console.WriteLine($"horaDeEntrada: {vehiculo.horaDeEntrada}");
+//Console.WriteLine($"esCliente: {vehiculo.esCliente}");
